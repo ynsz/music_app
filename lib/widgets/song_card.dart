@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/modules/songs/song.dart';
 
 class SongCard extends StatelessWidget {
-  const SongCard({super.key});
+  final Song song;
+
+  const SongCard({super.key, required this.song});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +19,7 @@ class SongCard extends StatelessWidget {
                 topLeft: Radius.circular(10.0),
                 topRight: Radius.circular(10.0),
               ),
-              child: Image.network(
-                "https://i.scdn.co/image/ab67616d0000b273151dedf4ac086e6bb4dee739",
-                fit: BoxFit.cover,
-              ),
+              child: Image.network(song.albumImageUrl, fit: BoxFit.cover),
             ),
             Container(
               width: double.infinity,
@@ -28,13 +28,16 @@ class SongCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "毎日 - Every Day",
+                    song.name,
                     style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
                     ),
                   ),
-                  Text('By 米津玄師', style: const TextStyle(color: Colors.grey)),
+                  Text(
+                    'By ${song.artistName}',
+                    style: const TextStyle(color: Colors.grey),
+                  ),
                 ],
               ),
             ),

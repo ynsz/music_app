@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_dotenv: ^6.0.0
   dio: ^5.9.0
+  freezed_annotation: ^3.1.0
+  flutter_layout_grid: ^2.0.8
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +49,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  freezed: ^3.2.4
+  build_runner: ^2.10.4
+  json_serializable: ^6.11.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
