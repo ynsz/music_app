@@ -59,7 +59,7 @@ class Player extends StatelessWidget {
               child: GestureDetector(
                 onTap: onButtonTap,
                 child: Icon(
-                  Icons.play_circle_fill,
+                  isPlay ? Icons.stop_circle : Icons.play_circle_fill,
                   color: Colors.white,
                   size: 40,
                 ),
