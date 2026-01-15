@@ -48,6 +48,13 @@ class _MusicAppState extends State<MusicApp> {
     });
   }
 
+  void _stop() {
+    _audioPlayer.stop();
+    setState(() {
+      _isPlay = false;
+    });
+  }
+
   void _handleSongSelected(Song song) {
     setState(() {
       _selectedSong = song;

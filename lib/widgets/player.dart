@@ -3,7 +3,14 @@ import 'package:music_app/modules/songs/song.dart';
 
 class Player extends StatelessWidget {
   final Song song;
-  const Player({super.key, required this.song});
+  final bool isPlay;
+  final void Function() onButtonTap;
+  const Player({
+    super.key,
+    required this.song,
+    required this.isPlay,
+    required this.onButtonTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +57,7 @@ class Player extends StatelessWidget {
             ),
             Center(
               child: GestureDetector(
+                onTap: onButtonTap,
                 child: Icon(
                   Icons.play_circle_fill,
                   color: Colors.white,
